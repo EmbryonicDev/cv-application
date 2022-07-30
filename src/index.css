@@ -15,3 +15,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#personalForm {
+  display: flex;
+  justify-content: center;
+}
+
+.personalInput {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+#personalSubmit {
+  margin-left: 40%;
+}
