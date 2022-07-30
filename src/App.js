@@ -1,8 +1,29 @@
+import React, { useState } from 'react';
+import PersonalForm from './Components/PersonalForm';
+import './index.css';
 
 function App() {
+  const [personalData, setPersonalData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    tel: ''
+  });
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setPersonalData((prevState) => {
+      return {
+        ...prevState,
+        [name]: value
+      };
+    });
+  }
+  console.log(personalData)
+
   return (
     <div className="App">
-      <h1>Sanity Test</h1>
+      <PersonalForm data={personalData} handleChange={handleChange} />
     </div>
   );
 }
