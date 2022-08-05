@@ -20,7 +20,7 @@ function App() {
       };
     });
   }
-  console.log(personalData)
+  console.log(personalData);
 
   return (
     <div className="App">
