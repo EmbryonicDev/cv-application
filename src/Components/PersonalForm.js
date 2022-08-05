@@ -1,9 +1,9 @@
 export default function PersonalForm(props) {
-  const { data, handleChange } = props;
+  const { data, handleChange, submitPersonal } = props;
 
   return (
     <div id="personalForm">
-      <form action="#">
+      <form action="#" onSubmit={submitPersonal}>
         <p className="personalInput">
           <label htmlFor="firstName">First Name:</label>
           <input

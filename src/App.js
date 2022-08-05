@@ -20,6 +20,17 @@ function App() {
       };
     });
   }
+
+  function submitPersonal(e) {
+    e.preventDefault();
+    setPersonalData(prevState => {
+      return ({
+        ...prevState,
+        display: true
+      })
+    })
+  }
+
   console.log(personalData);
 
   return (
@@ -27,6 +38,7 @@ function App() {
       <PersonalForm
         data={personalData}
         handleChange={handleChange}
+        submitPersonal={submitPersonal}
       />
     </div>
   );
