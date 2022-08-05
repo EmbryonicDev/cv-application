@@ -7,7 +7,8 @@ function App() {
     firstName: '',
     lastName: '',
     email: '',
-    tel: ''
+    tel: '',
+    display: false
   });
 
   function handleChange(event) {
@@ -23,7 +24,10 @@ function App() {
 
   return (
     <div className="App">
-      <PersonalForm data={personalData} handleChange={handleChange} />
+      <PersonalForm
+        data={personalData}
+        handleChange={handleChange}
+      />
     </div>
   );
 }
