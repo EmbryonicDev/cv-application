@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PersonalForm from './Components/PersonalForm';
+import PersonalPage from './Components/PersonalPage';
 import './index.css';
 
 function App() {
@@ -31,15 +32,24 @@ function App() {
     })
   }
 
-  console.log(personalData);
+  // console.log(personalData);
 
   return (
     <div className="App">
-      <PersonalForm
-        data={personalData}
-        handleChange={handleChange}
-        submitPersonal={submitPersonal}
-      />
+      {
+        !personalData.display &&
+        <PersonalForm
+          data={personalData}
+          handleChange={handleChange}
+          submitPersonal={submitPersonal}
+        />
+      }
+      {
+        personalData.display &&
+        <PersonalPage
+          personalData={personalData}
+        />
+      }
     </div>
   );
 }

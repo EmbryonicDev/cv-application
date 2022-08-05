@@ -30,3 +30,14 @@ code {
 #personalSubmit {
   margin-left: 40%;
 }
+
+#personalPage {
+  display: grid;
+  width: fit-content;
+  grid-template-columns: repeat(2, max-content);
+}
+
+.cvHeading {
+  justify-self: end;
+  margin-right: 8px;
+}
