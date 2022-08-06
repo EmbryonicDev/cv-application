@@ -14,14 +14,16 @@ function App() {
     display: false
   });
 
-  function handleChange(event) {
+  function handleChange(dataType, event) {
     const { name, value } = event.target;
-    setPersonalData((prevState) => {
-      return {
-        ...prevState,
-        [name]: value
-      };
-    });
+    if (dataType === 'personal') {
+      setPersonalData((prevState) => {
+        return {
+          ...prevState,
+          [name]: value
+        };
+      });
+    }
   }
 
   function submitPersonal(e) {
