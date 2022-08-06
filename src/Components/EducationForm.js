@@ -34,7 +34,7 @@ export default function EducationForm(props) {
             onChange={(event) => handleChange('education', event)}
           />
         </p>
-        <button id="personalSubmit" type="submit">
+        <button className="submitBtn" type="submit">
           Submit
         </button>
       </form>

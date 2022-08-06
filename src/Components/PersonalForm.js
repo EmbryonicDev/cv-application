@@ -42,7 +42,7 @@ export default function PersonalForm(props) {
             onChange={(event) => handleChange('personal', event)}
           />
         </p>
-        <button id="personalSubmit" type="submit">
+        <button className="submitBtn" type="submit">
           Submit
         </button>
       </form>

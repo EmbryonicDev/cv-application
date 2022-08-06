@@ -29,7 +29,7 @@ code {
   gap: 16px;
 }
 
-#personalSubmit {
+.submitBtn {
   margin-left: 40%;
 }
 
