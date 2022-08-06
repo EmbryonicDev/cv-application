@@ -4,7 +4,7 @@ export default function PersonalForm(props) {
   return (
     <div id="personalForm">
       <form action="#" onSubmit={submitPersonal}>
-        <p className="personalInput">
+        <p className="inputSet">
           <label htmlFor="firstName">First Name:</label>
           <input
             type="text"
@@ -14,7 +14,7 @@ export default function PersonalForm(props) {
             onChange={(event) => handleChange('personal', event)}
           />
         </p>
-        <p className="personalInput">
+        <p className="inputSet">
           <label htmlFor="lastName">Last Name:</label>
           <input
             type="text"
@@ -24,7 +24,7 @@ export default function PersonalForm(props) {
             onChange={(event) => handleChange('personal', event)}
           />
         </p>
-        <p className="personalInput">
+        <p className="inputSet">
           <label htmlFor="email">Email:</label>
           <input type="email"
             id="email"
@@ -33,7 +33,7 @@ export default function PersonalForm(props) {
             onChange={(event) => handleChange('personal', event)}
           />
         </p>
-        <p className="personalInput">
+        <p className="inputSet">
           <label htmlFor="tel">Telephone Number:</label>
           <input type="numeric"
             id="tel"

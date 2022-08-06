@@ -4,7 +4,7 @@ export default function EducationForm(props) {
   return (
     <div className="educationForm">
       <form action="#" onSubmit={submitEducation}>
-        <p className="personalInput">
+        <p className="inputSet">
           <label htmlFor="schoolName">School / Institute Name:</label>
           <input
             type="text"
@@ -14,7 +14,7 @@ export default function EducationForm(props) {
             onChange={(event) => handleChange('education', event)}
           />
         </p>
-        <p className="personalInput">
+        <p className="inputSet">
           <label htmlFor="titleOfStudy">Title of Study:</label>
           <input
             type="text"
@@ -24,7 +24,7 @@ export default function EducationForm(props) {
             onChange={(event) => handleChange('education', event)}
           />
         </p>
-        <p className="personalInput">
+        <p className="inputSet">
           <label htmlFor="studyDate">Completion Date:</label>
           <input
             type="date"

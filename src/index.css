@@ -23,7 +23,7 @@ code {
   justify-content: center;
 }
 
-.personalInput {
+.inputSet {
   display: flex;
   justify-content: space-between;
   gap: 16px;
