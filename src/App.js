@@ -41,6 +41,11 @@ function App() {
     })
   }
 
+  function submitEducation(e) {
+    e.preventDefault();
+    console.log('Education Submitted')
+  }
+
   // console.log(personalData);
 
   return (
