@@ -28,6 +28,13 @@ function App() {
           [name]: value
         };
       });
+    } else if (dataType === 'education') {
+      setEducationData((prevState) => {
+        return {
+          ...prevState,
+          [name]: value
+        };
+      });
     }
   }
 
