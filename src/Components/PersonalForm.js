@@ -11,7 +11,7 @@ export default function PersonalForm(props) {
             id="firstName"
             name="firstName"
             value={data.firstName}
-            onChange={handleChange}
+            onChange={(event) => handleChange('personal', event)}
           />
         </p>
         <p className="personalInput">
@@ -21,7 +21,7 @@ export default function PersonalForm(props) {
             id="lastName"
             name="lastName"
             value={data.lastName}
-            onChange={handleChange}
+            onChange={(event) => handleChange('personal', event)}
           />
         </p>
         <p className="personalInput">
@@ -30,7 +30,8 @@ export default function PersonalForm(props) {
             id="email"
             name="email"
             value={data.email}
-            onChange={handleChange} />
+            onChange={(event) => handleChange('personal', event)}
+          />
         </p>
         <p className="personalInput">
           <label htmlFor="tel">Telephone Number:</label>
@@ -38,7 +39,8 @@ export default function PersonalForm(props) {
             id="tel"
             name="tel"
             value={data.tel}
-            onChange={handleChange} />
+            onChange={(event) => handleChange('personal', event)}
+          />
         </p>
         <button id="personalSubmit" type="submit">
           Submit
