@@ -41,5 +41,14 @@ code {
 
 .cvHeading {
   justify-self: end;
-  margin-right: 8px;
+}
+
+.cvHeading,
+.userDetails {
+  margin: 16px 0 0 0;
+}
+
+.userDetails {
+  font-weight: normal;
+  margin-left: 8px;
 }
