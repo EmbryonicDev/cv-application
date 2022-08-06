@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import PersonalForm from './Components/PersonalForm';
 import PersonalPage from './Components/PersonalPage';
+import EducationForm from './Components/EducationForm';
+
 import './index.css';
 
 function App() {
@@ -50,6 +52,7 @@ function App() {
           personalData={personalData}
         />
       }
+      <EducationForm />
     </div>
   );
 }
