@@ -13,6 +13,11 @@ function App() {
     tel: '',
     display: false
   });
+  const [educationData, setEducationData] = useState({
+    schoolName: '',
+    titleOfStudy: '',
+    studyDate: ''
+  })
 
   function handleChange(dataType, event) {
     const { name, value } = event.target;
