@@ -1,6 +1,6 @@
 export default function EducationForm() {
   return (
-    <div className="educationWrap">
+    <div className="educationForm">
       Education Form goes here
     </div>
   )
