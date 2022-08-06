@@ -64,7 +64,11 @@ function App() {
           personalData={personalData}
         />
       }
-      <EducationForm />
+      <EducationForm
+        data={educationData}
+        handleChange={handleChange}
+        submitEducation={submitEducation}
+      />
     </div>
   );
 }
