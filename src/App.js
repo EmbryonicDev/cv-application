@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import PersonalForm from './Components/PersonalForm';
 import PersonalPage from './Components/PersonalPage';
 import EducationForm from './Components/EducationForm';
-import uniqid from 'uniqid';
-
+import EducationDiv from './Components/EducationDiv';
 import './index.css';
+import uniqid from 'uniqid';
 
 function App() {
   const [personalData, setPersonalData] = useState({
@@ -65,6 +65,19 @@ function App() {
   console.log(educationArr)
   // console.log(personalData);
 
+  const educationElmts = educationArr.map(el => {
+    const index = educationArr.findIndex(x => x.id === el.id)
+    return (
+      <EducationDiv
+        school={el.schoolName}
+        title={el.titleOfStudy}
+        date={el.studyDate}
+        index={index + 1}
+        key={el.id}
+      />
+    )
+  });
+
   return (
     <div className="App">
       {
@@ -86,6 +99,10 @@ function App() {
         handleChange={handleChange}
         submitEducation={submitEducation}
       />
+      {
+        educationArr.length > 0 &&
+        educationElmts
+      }
     </div>
   );
 }
