@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PersonalForm from './Components/PersonalForm';
 import PersonalPage from './Components/PersonalPage';
 import EducationForm from './Components/EducationForm';
+import uniqid from 'uniqid';
 
 import './index.css';
 
@@ -16,7 +17,8 @@ function App() {
   const [educationData, setEducationData] = useState({
     schoolName: '',
     titleOfStudy: '',
-    studyDate: ''
+    studyDate: '',
+    id: uniqid()
   });
   const [educationArr, setEducationArr] = useState([]);
 
