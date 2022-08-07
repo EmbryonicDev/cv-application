@@ -39,16 +39,16 @@ code {
   grid-template-columns: repeat(2, max-content);
 }
 
-.cvHeading {
+.pageLabel {
   justify-self: end;
 }
 
-.cvHeading,
-.userDetails {
+.pageLabel,
+.pageData {
   margin: 16px 0 0 0;
 }
 
-.userDetails {
+.pageData {
   font-weight: normal;
   margin-left: 8px;
 }
