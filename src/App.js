@@ -58,7 +58,8 @@ function App() {
     setEducationData({
       schoolName: '',
       titleOfStudy: '',
-      studyDate: ''
+      studyDate: '',
+      id: uniqid()
     })
   }
 
