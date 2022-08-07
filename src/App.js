@@ -52,8 +52,10 @@ function App() {
   function submitEducation(e) {
     e.preventDefault();
     console.log('Education Submitted')
+    setEducationArr(prevState => prevState.concat(educationData));
   }
 
+  console.log(educationArr)
   // console.log(personalData);
 
   return (
