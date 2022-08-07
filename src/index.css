@@ -52,3 +52,14 @@ code {
   font-weight: normal;
   margin-left: 8px;
 }
+
+.educationDiv {
+  display: grid;
+  width: fit-content;
+  grid-template-columns: repeat(2, max-content);
+}
+
+.categoryHeading {
+  grid-column: 1 / span 2;
+  justify-self: center;
+}
