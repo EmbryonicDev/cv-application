@@ -17,7 +17,8 @@ function App() {
     schoolName: '',
     titleOfStudy: '',
     studyDate: ''
-  })
+  });
+  const [educationArr, setEducationArr] = useState([]);
 
   function handleChange(dataType, event) {
     const { name, value } = event.target;
