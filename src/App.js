@@ -53,6 +53,11 @@ function App() {
     e.preventDefault();
     console.log('Education Submitted')
     setEducationArr(prevState => prevState.concat(educationData));
+    setEducationData({
+      schoolName: '',
+      titleOfStudy: '',
+      studyDate: ''
+    })
   }
 
   console.log(educationArr)
