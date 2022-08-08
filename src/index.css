@@ -33,12 +33,6 @@ code {
   margin-left: 40%;
 }
 
-#personalPage {
-  display: grid;
-  width: fit-content;
-  grid-template-columns: repeat(2, max-content);
-}
-
 .pageLabel {
   justify-self: end;
 }
@@ -54,7 +48,8 @@ code {
 }
 
 .educationDiv,
-.experienceDiv {
+.experienceDiv,
+#personalPage {
   display: grid;
   width: fit-content;
   grid-template-columns: repeat(2, max-content);
