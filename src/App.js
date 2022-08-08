@@ -102,6 +102,10 @@ function App() {
     })
   }
 
+  function editEducation() {
+    console.log('Edit Education')
+  }
+
 
   const educationElmts = educationArr.map(el => {
     const index = educationArr.findIndex(x => x.id === el.id)
@@ -112,6 +116,7 @@ function App() {
         date={el.studyDate}
         index={index + 1}
         key={el.id}
+        edit={editEducation}
       />
     )
   });
