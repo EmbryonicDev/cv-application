@@ -28,7 +28,8 @@ function App() {
     jobTasks: '',
     startDate: '',
     endDate: '',
-  })
+  });
+  const [experienceArr, setExperienceArr] = useState([]);
 
   function handleChange(dataType, event) {
     const { name, value } = event.target;
