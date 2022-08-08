@@ -48,6 +48,13 @@ function App() {
           [name]: value
         };
       });
+    } else if (dataType === 'experience') {
+      setExperienceData((prevState) => {
+        return {
+          ...prevState,
+          [name]: value
+        };
+      });
     }
   }
 
@@ -87,8 +94,9 @@ function App() {
     })
   }
 
-  console.log(educationArr)
+  console.log(experienceArr)
   // console.log(personalData);
+  console.log(experienceData)
 
   const educationElmts = educationArr.map(el => {
     const index = educationArr.findIndex(x => x.id === el.id)
