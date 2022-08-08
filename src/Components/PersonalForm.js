@@ -3,6 +3,7 @@ export default function PersonalForm(props) {
 
   return (
     <div id="personalForm">
+      <h1 className="formHeading">Personal</h1>
       <form action="#" onSubmit={submitPersonal}>
         <p className="inputSet">
           <label htmlFor="firstName">First Name:</label>

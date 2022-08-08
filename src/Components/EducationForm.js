@@ -3,6 +3,7 @@ export default function EducationForm(props) {
 
   return (
     <div className="educationForm">
+      <h1 className="formHeading">Education</h1>
       <form action="#" onSubmit={submitEducation}>
         <p className="inputSet">
           <label htmlFor="schoolName">School / Institute Name:</label>
