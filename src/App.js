@@ -20,7 +20,8 @@ function App() {
     schoolName: '',
     titleOfStudy: '',
     studyDate: '',
-    id: uniqid()
+    id: uniqid(),
+    edit: false
   });
   const [educationArr, setEducationArr] = useState([]);
   const [experienceData, setExperienceData] = useState({
@@ -76,7 +77,8 @@ function App() {
       schoolName: '',
       titleOfStudy: '',
       studyDate: '',
-      id: uniqid()
+      id: uniqid(),
+      edit: false,
     })
   }
 
@@ -104,7 +106,6 @@ function App() {
 
   function editEducation(id) {
     const editObj = educationArr.filter(obj => obj.id === id);
-    console.log(editObj)
     setEducationData(editObj[0]);
   }
 
