@@ -71,7 +71,6 @@ function App() {
 
   function submitEducation(e) {
     e.preventDefault();
-    console.log('Education Submitted')
     setEducationArr(prevState => prevState.concat(educationData));
     setEducationData({
       schoolName: '',
@@ -83,7 +82,6 @@ function App() {
 
   function submitExperience(e) {
     e.preventDefault();
-    console.log('Experience Submitted');
     setExperienceArr(prevState => prevState.concat(experienceData));
     setExperienceData({
       workName: '',
@@ -95,9 +93,6 @@ function App() {
     })
   }
 
-  console.log(experienceArr)
-  // console.log(personalData);
-  console.log(experienceData)
 
   const educationElmts = educationArr.map(el => {
     const index = educationArr.findIndex(x => x.id === el.id)
