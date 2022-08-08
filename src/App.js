@@ -6,6 +6,7 @@ import EducationDiv from './Components/EducationDiv';
 import './index.css';
 import uniqid from 'uniqid';
 import ExperienceForm from './Components/ExperienceForm';
+import ExperienceDiv from './Components/ExperienceDiv';
 
 function App() {
   const [personalData, setPersonalData] = useState({
@@ -111,6 +112,21 @@ function App() {
     )
   });
 
+  const experienceElmts = experienceArr.map(el => {
+    const index = experienceArr.findIndex(x => x.id === el.id);
+    return (
+      <ExperienceDiv
+        workName={el.workName}
+        workTitle={el.workTitle}
+        jobTasks={el.jobTasks}
+        startDate={el.startDate}
+        endDate={el.endDate}
+        index={index + 1}
+        key={el.id}
+      />
+    )
+  })
+
   return (
     <div className="App">
       {
@@ -141,6 +157,7 @@ function App() {
         handleChange={handleChange}
         submitExperience={submitExperience}
       />
+      {experienceElmts}
     </div>
   );
 }
