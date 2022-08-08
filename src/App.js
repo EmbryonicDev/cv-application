@@ -107,6 +107,12 @@ function App() {
   function editEducation(id) {
     const editObj = educationArr.filter(obj => obj.id === id);
     setEducationData(editObj[0]);
+    setEducationData(prevState => {
+      return {
+        ...prevState,
+        edit: true
+      }
+    })
   }
 
 
