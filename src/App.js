@@ -86,6 +86,23 @@ function App() {
     clearEducation();
   }
 
+  function resubmitEducation(id, event) {
+    event.preventDefault()
+    setEducationArr(prevState => prevState.map(obj => {
+      return obj.id === id ?
+        {
+          ...obj,
+          schoolName: educationData.schoolName,
+          titleOfStudy: educationData.titleOfStudy,
+          studyDate: educationData.studyDate,
+          id: id,
+          edit: false
+        } :
+        obj
+    }));
+    clearEducation();
+  }
+
   function submitExperience(e) {
     e.preventDefault();
     setExperienceArr(prevState => prevState.concat(experienceData));
@@ -117,23 +134,6 @@ function App() {
         edit: true
       }
     })
-  }
-
-  function resubmitEducation(id, event) {
-    event.preventDefault()
-    setEducationArr(prevState => prevState.map(obj => {
-      return obj.id === id ?
-        {
-          ...obj,
-          schoolName: educationData.schoolName,
-          titleOfStudy: educationData.titleOfStudy,
-          studyDate: educationData.studyDate,
-          id: id,
-          edit: false
-        } :
-        obj
-    }));
-    clearEducation();
   }
 
   const educationElmts = educationArr.map(el => {
