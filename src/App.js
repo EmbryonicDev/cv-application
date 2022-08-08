@@ -115,6 +115,21 @@ function App() {
     })
   }
 
+  function resubmitEducation(id, event) {
+    event.preventDefault()
+    setEducationArr(prevState => prevState.map(obj => {
+      return obj.id === id ?
+        {
+          ...obj,
+          schoolName: educationData.schoolName,
+          titleOfStudy: educationData.titleOfStudy,
+          studyDate: educationData.studyDate,
+          id: id,
+          edit: false
+        } :
+        obj
+    }))
+  }
 
   const educationElmts = educationArr.map(el => {
     const index = educationArr.findIndex(x => x.id === el.id)
