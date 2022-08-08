@@ -70,9 +70,7 @@ function App() {
     })
   }
 
-  function submitEducation(e) {
-    e.preventDefault();
-    setEducationArr(prevState => prevState.concat(educationData));
+  function clearEducation() {
     setEducationData({
       schoolName: '',
       titleOfStudy: '',
@@ -80,6 +78,12 @@ function App() {
       id: uniqid(),
       edit: false,
     })
+  }
+
+  function submitEducation(e) {
+    e.preventDefault();
+    setEducationArr(prevState => prevState.concat(educationData));
+    clearEducation();
   }
 
   function submitExperience(e) {
@@ -128,7 +132,8 @@ function App() {
           edit: false
         } :
         obj
-    }))
+    }));
+    clearEducation();
   }
 
   const educationElmts = educationArr.map(el => {
