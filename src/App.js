@@ -112,6 +112,11 @@ function App() {
         educationArr.length > 0 &&
         educationElmts
       }
+      <ExperienceForm
+        data={experienceData}
+        handleChange={handleChange}
+        submitExperience={submitExperience}
+      />
     </div>
   );
 }
