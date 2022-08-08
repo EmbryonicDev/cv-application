@@ -5,6 +5,7 @@ import EducationForm from './Components/EducationForm';
 import EducationDiv from './Components/EducationDiv';
 import './index.css';
 import uniqid from 'uniqid';
+import ExperienceForm from './Components/ExperienceForm';
 
 function App() {
   const [personalData, setPersonalData] = useState({
@@ -21,6 +22,13 @@ function App() {
     id: uniqid()
   });
   const [educationArr, setEducationArr] = useState([]);
+  const [experienceData, setExperienceData] = useState({
+    workName: '',
+    workTitle: '',
+    jobTasks: '',
+    startDate: '',
+    endDate: '',
+  })
 
   function handleChange(dataType, event) {
     const { name, value } = event.target;
