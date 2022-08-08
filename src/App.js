@@ -102,8 +102,10 @@ function App() {
     })
   }
 
-  function editEducation() {
-    console.log('Edit Education')
+  function editEducation(id) {
+    const editObj = educationArr.filter(obj => obj.id === id);
+    console.log(editObj)
+    setEducationData(editObj[0]);
   }
 
 
@@ -116,7 +118,7 @@ function App() {
         date={el.studyDate}
         index={index + 1}
         key={el.id}
-        edit={editEducation}
+        edit={() => editEducation(el.id)}
       />
     )
   });
