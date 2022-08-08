@@ -20,7 +20,8 @@ function App() {
     schoolName: '',
     titleOfStudy: '',
     studyDate: '',
-    id: uniqid()
+    id: uniqid(),
+    edit: false
   });
   const [educationArr, setEducationArr] = useState([]);
   const [experienceData, setExperienceData] = useState({
@@ -69,15 +70,37 @@ function App() {
     })
   }
 
-  function submitEducation(e) {
-    e.preventDefault();
-    setEducationArr(prevState => prevState.concat(educationData));
+  function clearEducation() {
     setEducationData({
       schoolName: '',
       titleOfStudy: '',
       studyDate: '',
-      id: uniqid()
+      id: uniqid(),
+      edit: false,
     })
+  }
+
+  function submitEducation(e) {
+    e.preventDefault();
+    setEducationArr(prevState => prevState.concat(educationData));
+    clearEducation();
+  }
+
+  function resubmitEducation(id, event) {
+    event.preventDefault()
+    setEducationArr(prevState => prevState.map(obj => {
+      return obj.id === id ?
+        {
+          ...obj,
+          schoolName: educationData.schoolName,
+          titleOfStudy: educationData.titleOfStudy,
+          studyDate: educationData.studyDate,
+          id: id,
+          edit: false
+        } :
+        obj
+    }));
+    clearEducation();
   }
 
   function submitExperience(e) {
@@ -102,6 +125,16 @@ function App() {
     })
   }
 
+  function editEducation(id) {
+    const editObj = educationArr.filter(obj => obj.id === id);
+    setEducationData(editObj[0]);
+    setEducationData(prevState => {
+      return {
+        ...prevState,
+        edit: true
+      }
+    })
+  }
 
   const educationElmts = educationArr.map(el => {
     const index = educationArr.findIndex(x => x.id === el.id)
@@ -112,6 +145,7 @@ function App() {
         date={el.studyDate}
         index={index + 1}
         key={el.id}
+        edit={() => editEducation(el.id)}
       />
     )
   });
@@ -151,7 +185,11 @@ function App() {
       <EducationForm
         data={educationData}
         handleChange={handleChange}
-        submitEducation={submitEducation}
+        onSubmit={
+          !educationData.edit ?
+            submitEducation :
+            (event) => resubmitEducation(educationData.id, event)
+        }
       />
       {
         educationArr.length > 0 &&

@@ -1,5 +1,5 @@
 export default function EducationDiv(props) {
-  const { school, title, date, index } = props
+  const { school, title, date, index, edit } = props
 
   return (
     <div className="educationDiv">
@@ -10,6 +10,7 @@ export default function EducationDiv(props) {
       <h4 className="pageData">{title}</h4>
       <h4 className="pageLabel">Date of Completion: </h4>
       <h4 className="pageData"> {date}</h4>
+      <button className="editBtn" onClick={edit}>↑ Edit ↑</button>
     </div>
   )
 }
