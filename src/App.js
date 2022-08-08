@@ -28,6 +28,7 @@ function App() {
     jobTasks: '',
     startDate: '',
     endDate: '',
+    id: uniqid()
   });
   const [experienceArr, setExperienceArr] = useState([]);
 
