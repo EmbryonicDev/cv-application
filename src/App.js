@@ -73,6 +73,20 @@ function App() {
     })
   }
 
+  function submitExperience(e) {
+    e.preventDefault();
+    console.log('Experience Submitted');
+    setExperienceArr(prevState => prevState.concat(experienceData));
+    setExperienceData({
+      workName: '',
+      workTitle: '',
+      jobTasks: '',
+      startDate: '',
+      endDate: '',
+      id: uniqid()
+    })
+  }
+
   console.log(educationArr)
   // console.log(personalData);
 
