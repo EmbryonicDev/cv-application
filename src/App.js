@@ -180,7 +180,11 @@ function App() {
       <EducationForm
         data={educationData}
         handleChange={handleChange}
-        submitEducation={submitEducation}
+        onSubmit={
+          !educationData.edit ?
+            submitEducation :
+            (event) => resubmitEducation(educationData.id, event)
+        }
       />
       {
         educationArr.length > 0 &&

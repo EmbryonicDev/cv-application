@@ -1,10 +1,12 @@
 export default function EducationForm(props) {
-  const { submitEducation, handleChange, data } = props;
+  const { onSubmit, handleChange, data } = props;
+
 
   return (
     <div className="educationForm">
       <h1 className="formHeading">Education</h1>
-      <form action="#" onSubmit={submitEducation}>
+      <form action="#" onSubmit={onSubmit}
+      >
         <p className="inputSet">
           <label htmlFor="schoolName">School / Institute Name:</label>
           <input
