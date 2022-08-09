@@ -34,10 +34,6 @@ code {
   margin-left: 40%;
 }
 
-.editBtn {
-  margin-top: 16px;
-}
-
 .pageLabel {
   justify-self: end;
 }
@@ -60,8 +56,18 @@ code {
   grid-template-columns: repeat(2, max-content);
 }
 
-.categoryHeading,
-.editBtn {
+.categoryHeading {
   grid-column: 1 / span 2;
   justify-self: center;
+}
+
+.editBtn,
+.deleteBtn {
+  width: 100px;
+  margin-top: 16px;
+}
+
+.editBtn {
+  justify-self: flex-end;
+  margin-right: 16px;
 }

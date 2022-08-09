@@ -123,6 +123,12 @@ function App() {
     })
   }
 
+  function deleteArrValue(id, arr, setData) {
+    console.log('delete entry')
+    setData(arr.filter(value => value.id !== id))
+    console.log(arr)
+  }
+
   function clearExperience() {
     setExperienceData({
       workName: '',
@@ -169,6 +175,7 @@ function App() {
         index={index + 1}
         key={el.id}
         edit={() => editArr(el.id, educationArr, setEducationData)}
+        remove={() => deleteArrValue(el.id, educationArr, setEducationArr)}
       />
     )
   });
