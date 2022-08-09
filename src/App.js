@@ -30,7 +30,8 @@ function App() {
     jobTasks: '',
     startDate: '',
     endDate: '',
-    id: uniqid()
+    id: uniqid(),
+    edit: false
   });
   const [experienceArr, setExperienceArr] = useState([]);
 
@@ -86,6 +87,17 @@ function App() {
     clearEducation();
   }
 
+  function editEducation(id) {
+    const editObj = educationArr.filter(obj => obj.id === id);
+    setEducationData(editObj[0]);
+    setEducationData(prevState => {
+      return {
+        ...prevState,
+        edit: true
+      }
+    })
+  }
+
   function resubmitEducation(id, event) {
     event.preventDefault()
     setEducationArr(prevState => prevState.map(obj => {
@@ -103,17 +115,52 @@ function App() {
     clearEducation();
   }
 
-  function submitExperience(e) {
-    e.preventDefault();
-    setExperienceArr(prevState => prevState.concat(experienceData));
+  function clearExperience() {
     setExperienceData({
       workName: '',
       workTitle: '',
       jobTasks: '',
       startDate: '',
       endDate: '',
-      id: uniqid()
+      id: uniqid(),
+      edit: false
     })
+  }
+
+  function submitExperience(e) {
+    e.preventDefault();
+    setExperienceArr(prevState => prevState.concat(experienceData));
+    clearExperience();
+  }
+
+  function editExperience(id) {
+    const editObj = experienceArr.filter(obj => obj.id === id);
+    setExperienceData(editObj[0]);
+    setExperienceData(prevState => {
+      return {
+        ...prevState,
+        edit: true
+      }
+    })
+  }
+
+  function resubmitExperience(id, event) {
+    event.preventDefault()
+    setExperienceArr(prevState => prevState.map(obj => {
+      return obj.id === id ?
+        {
+          ...obj,
+          workName: experienceData.workName,
+          workTitle: experienceData.workTitle,
+          jobTasks: experienceData.jobTasks,
+          startDate: experienceData.startDate,
+          endDate: experienceData.endDate,
+          id: id,
+          edit: false
+        } :
+        obj
+    }));
+    clearExperience();
   }
 
   function editPersonal() {
@@ -122,17 +169,6 @@ function App() {
         ...prevState,
         display: false
       })
-    })
-  }
-
-  function editEducation(id) {
-    const editObj = educationArr.filter(obj => obj.id === id);
-    setEducationData(editObj[0]);
-    setEducationData(prevState => {
-      return {
-        ...prevState,
-        edit: true
-      }
     })
   }
 
@@ -161,6 +197,7 @@ function App() {
         endDate={el.endDate}
         index={index + 1}
         key={el.id}
+        edit={() => editExperience(el.id)}
       />
     )
   })
@@ -198,7 +235,11 @@ function App() {
       <ExperienceForm
         data={experienceData}
         handleChange={handleChange}
-        submitExperience={submitExperience}
+        onSubmit={
+          !experienceData.edit ?
+            submitExperience :
+            (event) => resubmitExperience(experienceData.id, event)
+        }
       />
       {experienceElmts}
     </div>
