@@ -30,7 +30,8 @@ function App() {
     jobTasks: '',
     startDate: '',
     endDate: '',
-    id: uniqid()
+    id: uniqid(),
+    edit: false
   });
   const [experienceArr, setExperienceArr] = useState([]);
 
@@ -112,7 +113,8 @@ function App() {
       jobTasks: '',
       startDate: '',
       endDate: '',
-      id: uniqid()
+      id: uniqid(),
+      edit: false
     })
   }
 
