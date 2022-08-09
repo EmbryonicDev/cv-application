@@ -1,9 +1,9 @@
 export default function ExperienceForm(props) {
-  const { submitExperience, data, handleChange } = props
+  const { onSubmit, data, handleChange } = props
   return (
     <div className="ExperienceForm">
       <h1 className="formHeading">Experience</h1>
-      <form action="#" onSubmit={submitExperience}>
+      <form action="#" onSubmit={onSubmit}>
         <p className="inputSet">
           <label htmlFor="workName">Company Name: </label>
           <input
