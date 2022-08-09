@@ -124,9 +124,7 @@ function App() {
   }
 
   function deleteArrValue(id, arr, setData) {
-    console.log('delete entry')
     setData(arr.filter(value => value.id !== id))
-    console.log(arr)
   }
 
   function clearExperience() {
