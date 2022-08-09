@@ -51,6 +51,7 @@ export default function PersonalForm(props) {
         <button className="submitBtn" type="submit">
           Submit
         </button>
+        <hr />
       </form>
     </div>
   );

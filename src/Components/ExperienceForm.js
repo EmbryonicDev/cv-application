@@ -61,6 +61,7 @@ export default function ExperienceForm(props) {
           Submit
         </button>
       </form>
+      <hr />
     </div>
   )
 }
