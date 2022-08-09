@@ -129,6 +129,17 @@ function App() {
     })
   }
 
+  function editExperience(id) {
+    const editObj = experienceArr.filter(obj => obj.id === id);
+    setExperienceData(editObj[0]);
+    setExperienceData(prevState => {
+      return {
+        ...prevState,
+        edit: true
+      }
+    })
+  }
+
   function editPersonal() {
     setPersonalData(prevState => {
       return ({
@@ -163,6 +174,7 @@ function App() {
         endDate={el.endDate}
         index={index + 1}
         key={el.id}
+        edit={() => editExperience(el.id)}
       />
     )
   })
