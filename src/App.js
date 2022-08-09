@@ -235,7 +235,11 @@ function App() {
       <ExperienceForm
         data={experienceData}
         handleChange={handleChange}
-        submitExperience={submitExperience}
+        onSubmit={
+          !experienceData.edit ?
+            submitExperience :
+            (event) => resubmitExperience(experienceData.id, event)
+        }
       />
       {experienceElmts}
     </div>
