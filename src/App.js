@@ -115,9 +115,7 @@ function App() {
     clearEducation();
   }
 
-  function submitExperience(e) {
-    e.preventDefault();
-    setExperienceArr(prevState => prevState.concat(experienceData));
+  function clearExperience() {
     setExperienceData({
       workName: '',
       workTitle: '',
@@ -127,6 +125,12 @@ function App() {
       id: uniqid(),
       edit: false
     })
+  }
+
+  function submitExperience(e) {
+    e.preventDefault();
+    setExperienceArr(prevState => prevState.concat(experienceData));
+    clearExperience();
   }
 
   function editExperience(id) {
