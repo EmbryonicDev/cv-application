@@ -71,6 +71,15 @@ function App() {
     })
   }
 
+  function editPersonal() {
+    setPersonalData(prevState => {
+      return ({
+        ...prevState,
+        display: false
+      })
+    })
+  }
+
   function clearEducation() {
     setEducationData({
       schoolName: '',
@@ -161,15 +170,6 @@ function App() {
         obj
     }));
     clearExperience();
-  }
-
-  function editPersonal() {
-    setPersonalData(prevState => {
-      return ({
-        ...prevState,
-        display: false
-      })
-    })
   }
 
   const educationElmts = educationArr.map(el => {
