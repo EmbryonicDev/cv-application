@@ -192,6 +192,7 @@ function App() {
         index={index + 1}
         key={el.id}
         edit={() => editArr(el.id, experienceArr, setExperienceData)}
+        remove={() => deleteArrValue(el.id, experienceArr, setExperienceArr)}
       />
     )
   })
