@@ -144,6 +144,25 @@ function App() {
     })
   }
 
+  function resubmitExperience(id, event) {
+    event.preventDefault()
+    setExperienceArr(prevState => prevState.map(obj => {
+      return obj.id === id ?
+        {
+          ...obj,
+          workName: experienceData.workName,
+          workTitle: experienceData.workTitle,
+          jobTasks: experienceData.jobTasks,
+          startDate: experienceData.startDate,
+          endDate: experienceData.endDate,
+          id: id,
+          edit: false
+        } :
+        obj
+    }));
+    clearExperience();
+  }
+
   function editPersonal() {
     setPersonalData(prevState => {
       return ({
