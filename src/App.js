@@ -87,6 +87,17 @@ function App() {
     clearEducation();
   }
 
+  function editEducation(id) {
+    const editObj = educationArr.filter(obj => obj.id === id);
+    setEducationData(editObj[0]);
+    setEducationData(prevState => {
+      return {
+        ...prevState,
+        edit: true
+      }
+    })
+  }
+
   function resubmitEducation(id, event) {
     event.preventDefault()
     setEducationArr(prevState => prevState.map(obj => {
@@ -124,17 +135,6 @@ function App() {
         ...prevState,
         display: false
       })
-    })
-  }
-
-  function editEducation(id) {
-    const editObj = educationArr.filter(obj => obj.id === id);
-    setEducationData(editObj[0]);
-    setEducationData(prevState => {
-      return {
-        ...prevState,
-        edit: true
-      }
     })
   }
 
