@@ -96,17 +96,6 @@ function App() {
     clearEducation();
   }
 
-  function editEducation(id) {
-    const editObj = educationArr.filter(obj => obj.id === id);
-    setEducationData(editObj[0]);
-    setEducationData(prevState => {
-      return {
-        ...prevState,
-        edit: true
-      }
-    })
-  }
-
   function resubmitEducation(id, event) {
     event.preventDefault()
     setEducationArr(prevState => prevState.map(obj => {
@@ -122,6 +111,17 @@ function App() {
         obj
     }));
     clearEducation();
+  }
+
+  function editArr(id, arr, setData) {
+    const editObj = arr.filter(obj => obj.id === id);
+    setData(editObj[0]);
+    setData(prevState => {
+      return {
+        ...prevState,
+        edit: true
+      }
+    })
   }
 
   function clearExperience() {
@@ -140,17 +140,6 @@ function App() {
     e.preventDefault();
     setExperienceArr(prevState => prevState.concat(experienceData));
     clearExperience();
-  }
-
-  function editExperience(id) {
-    const editObj = experienceArr.filter(obj => obj.id === id);
-    setExperienceData(editObj[0]);
-    setExperienceData(prevState => {
-      return {
-        ...prevState,
-        edit: true
-      }
-    })
   }
 
   function resubmitExperience(id, event) {
@@ -181,7 +170,7 @@ function App() {
         date={el.studyDate}
         index={index + 1}
         key={el.id}
-        edit={() => editEducation(el.id)}
+        edit={() => editArr(el.id, educationArr, setEducationData)}
       />
     )
   });
@@ -197,7 +186,7 @@ function App() {
         endDate={el.endDate}
         index={index + 1}
         key={el.id}
-        edit={() => editExperience(el.id)}
+        edit={() => editArr(el.id, experienceArr, setExperienceData)}
       />
     )
   })
