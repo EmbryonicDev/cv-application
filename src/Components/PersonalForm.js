@@ -12,6 +12,7 @@ export default function PersonalForm(props) {
             id="firstName"
             name="firstName"
             value={data.firstName}
+            required
             onChange={(event) => handleChange('personal', event)}
           />
         </p>
@@ -22,6 +23,7 @@ export default function PersonalForm(props) {
             id="lastName"
             name="lastName"
             value={data.lastName}
+            required
             onChange={(event) => handleChange('personal', event)}
           />
         </p>
@@ -31,6 +33,7 @@ export default function PersonalForm(props) {
             id="email"
             name="email"
             value={data.email}
+            required
             onChange={(event) => handleChange('personal', event)}
           />
         </p>
@@ -40,6 +43,7 @@ export default function PersonalForm(props) {
             id="tel"
             name="tel"
             value={data.tel}
+            required
             onChange={(event) => handleChange('personal', event)}
             pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
           />
