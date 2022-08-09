@@ -41,6 +41,7 @@ export default function PersonalForm(props) {
             name="tel"
             value={data.tel}
             onChange={(event) => handleChange('personal', event)}
+            pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
           />
         </p>
         <button className="submitBtn" type="submit">
