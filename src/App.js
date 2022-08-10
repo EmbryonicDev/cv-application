@@ -199,6 +199,7 @@ function App() {
 
   return (
     <div className="App">
+      <button id="toggleCv" onClick={toggleCv}>Toggle CV</button>
       {
         !showCv &&
         <div id="editInfo">
@@ -242,7 +243,7 @@ function App() {
           {experienceElmts}
         </div>
       }
-    </div>
+    </div >
   );
 }
 
