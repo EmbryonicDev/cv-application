@@ -28,6 +28,17 @@ export default function PersonalForm(props) {
           />
         </p>
         <p className="inputSet">
+          <label htmlFor="profession">Profession:</label>
+          <input
+            type="text"
+            id="profession"
+            name="profession"
+            value={data.profession}
+            required
+            onChange={(event) => handleChange('personal', event)}
+          />
+        </p>
+        <p className="inputSet">
           <label htmlFor="email">Email:</label>
           <input type="email"
             id="email"
@@ -46,6 +57,28 @@ export default function PersonalForm(props) {
             required
             onChange={(event) => handleChange('personal', event)}
             pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
+          />
+        </p>
+        <p className="inputSet">
+          <label htmlFor="address">Address:</label>
+          <input
+            type="text"
+            id="address"
+            name="address"
+            value={data.address}
+            required
+            onChange={(event) => handleChange('personal', event)}
+          />
+        </p>
+        <p className="inputSet">
+          <label htmlFor="website">Website:</label>
+          <input
+            type="url"
+            id="website"
+            name="website"
+            value={data.website}
+            required
+            onChange={(event) => handleChange('personal', event)}
           />
         </p>
         <button className="submitBtn" type="submit">
