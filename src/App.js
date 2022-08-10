@@ -35,6 +35,8 @@ function App() {
   });
   const [experienceArr, setExperienceArr] = useState([]);
 
+  const [showCv, setShowCv] = useState(false);
+
   function handleChange(dataType, event) {
     const { name, value } = event.target;
     if (dataType === 'personal') {
