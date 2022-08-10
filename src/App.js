@@ -34,6 +34,7 @@ function App() {
     edit: false
   });
   const [experienceArr, setExperienceArr] = useState([]);
+  const [showCv, setShowCv] = useState(false);
 
   function handleChange(dataType, event) {
     const { name, value } = event.target;
@@ -163,6 +164,10 @@ function App() {
     clearExperience();
   }
 
+  function toggleCv() {
+    setShowCv(prevState => !prevState)
+  }
+
   const educationElmts = educationArr.map(el => {
     const index = educationArr.findIndex(x => x.id === el.id)
     return (
@@ -197,45 +202,51 @@ function App() {
 
   return (
     <div className="App">
+      <button id="toggleCv" onClick={toggleCv}>{showCv ? 'Edit CV' : 'Show CV'}</button>
       {
-        !personalData.display &&
-        <PersonalForm
-          data={personalData}
-          handleChange={handleChange}
-          submitPersonal={submitPersonal}
-        />
+        !showCv &&
+        <div id="editInfo">
+          {
+            !personalData.display &&
+            <PersonalForm
+              data={personalData}
+              handleChange={handleChange}
+              submitPersonal={submitPersonal}
+            />
+          }
+          {
+            personalData.display &&
+            <PersonalPage
+              personalData={personalData}
+              edit={editPersonal}
+            />
+          }
+          <EducationForm
+            data={educationData}
+            handleChange={handleChange}
+            onSubmit={
+              !educationData.edit ?
+                submitEducation :
+                (event) => resubmitEducation(educationData.id, event)
+            }
+          />
+          {
+            educationArr.length > 0 &&
+            educationElmts
+          }
+          <ExperienceForm
+            data={experienceData}
+            handleChange={handleChange}
+            onSubmit={
+              !experienceData.edit ?
+                submitExperience :
+                (event) => resubmitExperience(experienceData.id, event)
+            }
+          />
+          {experienceElmts}
+        </div>
       }
-      {
-        personalData.display &&
-        <PersonalPage
-          personalData={personalData}
-          edit={editPersonal}
-        />
-      }
-      <EducationForm
-        data={educationData}
-        handleChange={handleChange}
-        onSubmit={
-          !educationData.edit ?
-            submitEducation :
-            (event) => resubmitEducation(educationData.id, event)
-        }
-      />
-      {
-        educationArr.length > 0 &&
-        educationElmts
-      }
-      <ExperienceForm
-        data={experienceData}
-        handleChange={handleChange}
-        onSubmit={
-          !experienceData.edit ?
-            submitExperience :
-            (event) => resubmitExperience(experienceData.id, event)
-        }
-      />
-      {experienceElmts}
-    </div>
+    </div >
   );
 }
 
