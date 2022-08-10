@@ -203,7 +203,7 @@ function App() {
 
   return (
     <div className="App">
-      <button id="toggleCv" onClick={toggleCv}>Toggle CV</button>
+      <button id="toggleCv" onClick={toggleCv}>{showCv ? 'Edit CV' : 'Show CV'}</button>
       {
         !showCv &&
         <div id="editInfo">
