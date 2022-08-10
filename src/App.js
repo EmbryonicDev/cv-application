@@ -200,43 +200,48 @@ function App() {
   return (
     <div className="App">
       {
-        !personalData.display &&
-        <PersonalForm
-          data={personalData}
-          handleChange={handleChange}
-          submitPersonal={submitPersonal}
-        />
+        !showCv &&
+        <div id="editInfo">
+          {
+            !personalData.display &&
+            <PersonalForm
+              data={personalData}
+              handleChange={handleChange}
+              submitPersonal={submitPersonal}
+            />
+          }
+          {
+            personalData.display &&
+            <PersonalPage
+              personalData={personalData}
+              edit={editPersonal}
+            />
+          }
+          <EducationForm
+            data={educationData}
+            handleChange={handleChange}
+            onSubmit={
+              !educationData.edit ?
+                submitEducation :
+                (event) => resubmitEducation(educationData.id, event)
+            }
+          />
+          {
+            educationArr.length > 0 &&
+            educationElmts
+          }
+          <ExperienceForm
+            data={experienceData}
+            handleChange={handleChange}
+            onSubmit={
+              !experienceData.edit ?
+                submitExperience :
+                (event) => resubmitExperience(experienceData.id, event)
+            }
+          />
+          {experienceElmts}
+        </div>
       }
-      {
-        personalData.display &&
-        <PersonalPage
-          personalData={personalData}
-          edit={editPersonal}
-        />
-      }
-      <EducationForm
-        data={educationData}
-        handleChange={handleChange}
-        onSubmit={
-          !educationData.edit ?
-            submitEducation :
-            (event) => resubmitEducation(educationData.id, event)
-        }
-      />
-      {
-        educationArr.length > 0 &&
-        educationElmts
-      }
-      <ExperienceForm
-        data={experienceData}
-        handleChange={handleChange}
-        onSubmit={
-          !experienceData.edit ?
-            submitExperience :
-            (event) => resubmitExperience(experienceData.id, event)
-        }
-      />
-      {experienceElmts}
     </div>
   );
 }
