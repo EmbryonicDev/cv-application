@@ -34,7 +34,6 @@ function App() {
     edit: false
   });
   const [experienceArr, setExperienceArr] = useState([]);
-
   const [showCv, setShowCv] = useState(false);
 
   function handleChange(dataType, event) {
