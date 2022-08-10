@@ -35,8 +35,6 @@ function App() {
   });
   const [experienceArr, setExperienceArr] = useState([]);
 
-  // testing pull from branch
-
   function handleChange(dataType, event) {
     const { name, value } = event.target;
     if (dataType === 'personal') {
