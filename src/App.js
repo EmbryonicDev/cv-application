@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PersonalForm from './Components/PersonalForm';
-import PersonalPage from './Components/PersonalPage';
+import PersonalDiv from './Components/PersonalDiv';
 import EducationForm from './Components/EducationForm';
 import EducationDiv from './Components/EducationDiv';
 import './index.css';
@@ -219,7 +219,7 @@ function App() {
           }
           {
             personalData.display &&
-            <PersonalPage
+            <PersonalDiv
               personalData={personalData}
               edit={editPersonal}
             />

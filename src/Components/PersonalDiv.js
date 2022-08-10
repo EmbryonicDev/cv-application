@@ -1,4 +1,4 @@
-export default function PersonalPage(props) {
+export default function PersonalDiv(props) {
   const { firstName, lastName, email, tel, profession, address, website } = props.personalData;
   const { edit } = props;
 
