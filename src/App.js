@@ -12,8 +12,11 @@ function App() {
   const [personalData, setPersonalData] = useState({
     firstName: '',
     lastName: '',
+    profession: '',
     email: '',
     tel: '',
+    address: '',
+    website: '',
     display: false
   });
   const [educationData, setEducationData] = useState({
