@@ -165,6 +165,10 @@ function App() {
     clearExperience();
   }
 
+  function toggleCv() {
+    setShowCv(prevState => !prevState)
+  }
+
   const educationElmts = educationArr.map(el => {
     const index = educationArr.findIndex(x => x.id === el.id)
     return (
