@@ -28,7 +28,8 @@ export function PersonalCv(props) {
         </li>
         <li className='contactData'>
           <img src={websiteIcon} alt="Website Icon" className="personalIcon" />
-          <h4 className='contactText'>{website}</h4>
+          <h4 className='contactText'>
+            <a href={website}>{website}</a></h4>
         </li>
       </ul>
     </div>
