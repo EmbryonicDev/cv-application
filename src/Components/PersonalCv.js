@@ -23,7 +23,7 @@ export function PersonalCv(props) {
           <h4 className='contactText'>{tel}</h4>
         </li>
         <li className='contactData'>
-          <img src={emailIcon} alt="Email Icon" className="emailIcon" />
+          <img src={emailIcon} alt="Email Icon" className="personalIcon" />
           <h4 className='contactText'>{email}</h4>
         </li>
         <li className='contactData'>
