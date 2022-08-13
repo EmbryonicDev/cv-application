@@ -31,6 +31,7 @@ function App() {
   const [experienceData, setExperienceData] = useState({
     workName: '',
     workTitle: '',
+    country: '',
     jobTasks: '',
     startDate: '',
     endDate: '',
@@ -137,6 +138,7 @@ function App() {
       workName: '',
       workTitle: '',
       jobTasks: '',
+      country: '',
       startDate: '',
       endDate: '',
       id: uniqid(),
@@ -157,6 +159,7 @@ function App() {
         {
           workName: experienceData.workName,
           workTitle: experienceData.workTitle,
+          country: experienceData.country,
           jobTasks: experienceData.jobTasks,
           startDate: experienceData.startDate,
           endDate: experienceData.endDate,
@@ -194,6 +197,7 @@ function App() {
         workName={el.workName}
         workTitle={el.workTitle}
         jobTasks={el.jobTasks}
+        country={el.country}
         startDate={el.startDate}
         endDate={el.endDate}
         index={index + 1}

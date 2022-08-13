@@ -1,5 +1,8 @@
 export default function ExperienceDiv(props) {
-  const { workName, workTitle, jobTasks, startDate, endDate, index, edit, remove } = props
+  const { workName, workTitle, country, jobTasks, startDate, endDate, index, edit, remove } = props
+
+  console.log(country)
+
   return (
     <div className="experienceDiv">
       <h1 className='categoryHeading'>Work History {index}</h1>
@@ -7,6 +10,8 @@ export default function ExperienceDiv(props) {
       <h4 className="pageData">{workName}</h4>
       <h4 className="pageLabel">Job Title: </h4>
       <h4 className="pageData">{workTitle}</h4>
+      <h4 className="pageLabel">Country: </h4>
+      <h4 className="pageData">{country}</h4>
       <h4 className="pageLabel">Main Tasks of Job: </h4>
       <h4 className="pageData">{jobTasks}</h4>
       <h4 className="pageLabel">Start Date: </h4>
