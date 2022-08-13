@@ -25,6 +25,16 @@ export default function ExperienceForm(props) {
           />
         </p>
         <p className="inputSet">
+          <label htmlFor="country">Country: </label>
+          <input
+            type="text"
+            id='country'
+            name='country'
+            value={data.country}
+            onChange={(event) => handleChange('experience', event)}
+          />
+        </p>
+        <p className="inputSet">
           <label htmlFor="jobTasks">Main Tasks of Job: </label>
           <textarea
             cols="30"

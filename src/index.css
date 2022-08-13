@@ -3,6 +3,8 @@
 }
 
 body {
+  width: 100vw;
+  height: 100vh;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -35,7 +37,7 @@ code {
 }
 
 .pageLabel {
-  justify-self: end;
+  justify-self: start;
 }
 
 .pageLabel,
@@ -50,7 +52,7 @@ code {
 
 .educationDiv,
 .experienceDiv,
-#personalPage {
+#personalDiv {
   display: grid;
   width: fit-content;
   grid-template-columns: repeat(2, max-content);
@@ -71,3 +73,50 @@ code {
   justify-self: flex-end;
   margin-right: 16px;
 }
+
+#showCv {
+  width: 100vw;
+  max-width: 980px;
+}
+
+/* PersonalCv */
+#personalCv {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 0 40px;
+  border-bottom: solid black;
+}
+
+.name,
+.professionText {
+  margin: 0;
+}
+
+.contactList {
+  list-style: none;
+}
+
+.contactData {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+#nameDiv,
+.contactList {
+  margin: 0 0 32px;
+}
+
+.personalIcon {
+  height: 16px;
+  margin: 0;
+  align-self: center;
+}
+
+.contactText {
+  margin: 0;
+  align-self: center;
+}
+
+/* -------- */

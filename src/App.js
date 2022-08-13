@@ -7,6 +7,7 @@ import './index.css';
 import uniqid from 'uniqid';
 import ExperienceForm from './Components/ExperienceForm';
 import ExperienceDiv from './Components/ExperienceDiv';
+import { PersonalCv } from './Components/PersonalCv';
 
 function App() {
   const [personalData, setPersonalData] = useState({
@@ -30,6 +31,7 @@ function App() {
   const [experienceData, setExperienceData] = useState({
     workName: '',
     workTitle: '',
+    country: '',
     jobTasks: '',
     startDate: '',
     endDate: '',
@@ -136,6 +138,7 @@ function App() {
       workName: '',
       workTitle: '',
       jobTasks: '',
+      country: '',
       startDate: '',
       endDate: '',
       id: uniqid(),
@@ -156,6 +159,7 @@ function App() {
         {
           workName: experienceData.workName,
           workTitle: experienceData.workTitle,
+          country: experienceData.country,
           jobTasks: experienceData.jobTasks,
           startDate: experienceData.startDate,
           endDate: experienceData.endDate,
@@ -193,6 +197,7 @@ function App() {
         workName={el.workName}
         workTitle={el.workTitle}
         jobTasks={el.jobTasks}
+        country={el.country}
         startDate={el.startDate}
         endDate={el.endDate}
         index={index + 1}
@@ -206,6 +211,14 @@ function App() {
   return (
     <div className="App">
       <button id="toggleCv" onClick={toggleCv}>{showCv ? 'Edit CV' : 'Show CV'}</button>
+      {
+        showCv &&
+        <div id="showCv">
+          <PersonalCv
+            personalData={personalData}
+          />
+        </div>
+      }
       {
         !showCv &&
         <div id="editInfo">
