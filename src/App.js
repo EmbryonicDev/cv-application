@@ -7,6 +7,7 @@ import './index.css';
 import uniqid from 'uniqid';
 import ExperienceForm from './Components/ExperienceForm';
 import ExperienceDiv from './Components/ExperienceDiv';
+import { PersonalCv } from './Components/PersonalCv';
 
 function App() {
   const [personalData, setPersonalData] = useState({
@@ -206,6 +207,14 @@ function App() {
   return (
     <div className="App">
       <button id="toggleCv" onClick={toggleCv}>{showCv ? 'Edit CV' : 'Show CV'}</button>
+      {
+        showCv &&
+        <div id="showCv">
+          <PersonalCv
+            personalData={personalData}
+          />
+        </div>
+      }
       {
         !showCv &&
         <div id="editInfo">
