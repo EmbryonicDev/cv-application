@@ -3,7 +3,7 @@ export default function PersonalDiv(props) {
   const { edit } = props;
 
   return (
-    <div id="personalPage">
+    <div id="personalDiv">
       <h1 className='categoryHeading'>Personal Information</h1>
       <h4 className="pageLabel">Name: </h4>
       <h4 className="pageData" id='name'>{` ${firstName} ${lastName}`}</h4>
