@@ -1,6 +1,8 @@
 export default function ExperienceCv(props) {
-  const { workName, workTitle, country, jobTasks, startDate, endDate } = props.experienceArr;
-  const [startYear, endYear] = [Date.getYear(startDate), Date.getYear(endDate)]
+  console.log(props)
+  const { workName, workTitle, country, jobTasks, startDate, endDate } = props;
+  console.log(typeof endDate)
+  const [startYear, endYear] = [startDate.substring(0, 4), endDate.substring(0, 4)]
 
   return (
     <div className="experienceCv">
