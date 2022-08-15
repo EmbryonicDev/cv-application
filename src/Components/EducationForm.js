@@ -28,6 +28,16 @@ export default function EducationForm(props) {
           />
         </p>
         <p className="inputSet">
+          <label htmlFor="country">Country:</label>
+          <input
+            type="text"
+            id="country"
+            name="country"
+            value={data.country}
+            onChange={(event) => handleChange('education', event)}
+          />
+        </p>
+        <p className="inputSet">
           <label htmlFor="studyDate">Completion Date:</label>
           <input
             type="date"
