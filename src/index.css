@@ -133,5 +133,5 @@ code {
 
 .workTasksCv {
   border-left: solid black;
-  padding-left: 40px;
+  padding: 0 0 42px 40px;
 }
