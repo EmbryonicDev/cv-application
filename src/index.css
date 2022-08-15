@@ -119,4 +119,19 @@ code {
   align-self: center;
 }
 
-/* -------- */
+/* Experience Cv */
+.experienceCv {
+  display: flex;
+  gap: 60px;
+}
+
+.experienceCv h3,
+.experienceCv h4,
+.experienceCv p {
+  margin: 0;
+}
+
+.workTasksCv {
+  border-left: solid black;
+  padding-left: 40px;
+}
