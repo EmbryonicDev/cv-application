@@ -8,6 +8,7 @@ import uniqid from 'uniqid';
 import ExperienceForm from './Components/ExperienceForm';
 import ExperienceDiv from './Components/ExperienceDiv';
 import { PersonalCv } from './Components/PersonalCv';
+import ExperienceCv from './Components/ExperienceCv';
 
 function App() {
   const [personalData, setPersonalData] = useState({
@@ -206,6 +207,20 @@ function App() {
         remove={() => deleteArrValue(el.id, experienceArr, setExperienceArr)}
       />
     )
+  });
+
+  const experienceCvDivs = experienceArr.map(el => {
+    return (
+      <ExperienceCv
+        workName={el.workName}
+        workTitle={el.workTitle}
+        jobTasks={el.jobTasks}
+        country={el.country}
+        startDate={el.startDate}
+        endDate={el.endDate}
+        key={el.id}
+      />
+    )
   })
 
   return (
@@ -218,6 +233,7 @@ function App() {
             personalData={personalData}
           />
           <h2 className="cvHeading">Work Experience</h2>
+          {experienceCvDivs}
         </div>
       }
       {
