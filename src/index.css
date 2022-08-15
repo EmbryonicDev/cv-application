@@ -120,6 +120,11 @@ code {
 }
 
 /* Experience Cv */
+.experienceCvDiv {
+  padding-bottom: 32px;
+  border-bottom: solid black;
+}
+
 .experienceCv {
   display: flex;
   gap: 60px;
