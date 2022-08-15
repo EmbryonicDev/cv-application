@@ -233,7 +233,9 @@ function App() {
             personalData={personalData}
           />
           <h2 className="cvHeading">Work Experience</h2>
-          {experienceCvDivs}
+          <div className="experienceCvDiv">
+            {experienceCvDivs}
+          </div>
         </div>
       }
       {
