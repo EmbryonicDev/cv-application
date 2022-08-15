@@ -24,6 +24,7 @@ function App() {
   const [educationData, setEducationData] = useState({
     schoolName: '',
     titleOfStudy: '',
+    country: '',
     studyDate: '',
     id: uniqid(),
     edit: false
@@ -92,6 +93,7 @@ function App() {
       schoolName: '',
       titleOfStudy: '',
       studyDate: '',
+      country: '',
       id: uniqid(),
       edit: false,
     })
@@ -111,6 +113,7 @@ function App() {
           schoolName: educationData.schoolName,
           titleOfStudy: educationData.titleOfStudy,
           studyDate: educationData.studyDate,
+          country: educationData.country,
           id: id,
           edit: false
         } :
@@ -182,6 +185,7 @@ function App() {
       <EducationDiv
         school={el.schoolName}
         title={el.titleOfStudy}
+        country={el.country}
         date={el.studyDate}
         index={index + 1}
         key={el.id}
