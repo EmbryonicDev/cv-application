@@ -217,6 +217,7 @@ function App() {
           <PersonalCv
             personalData={personalData}
           />
+          <h2 className="cvHeading">Work Experience</h2>
         </div>
       }
       {
