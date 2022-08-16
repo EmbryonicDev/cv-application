@@ -9,6 +9,7 @@ import ExperienceForm from './Components/ExperienceForm';
 import ExperienceDiv from './Components/ExperienceDiv';
 import { PersonalCv } from './Components/PersonalCv';
 import ExperienceCv from './Components/ExperienceCv';
+import EducationCv from './Components/EducationCv';
 
 function App() {
   const [personalData, setPersonalData] = useState({
@@ -195,6 +196,18 @@ function App() {
     )
   });
 
+  const educationCvDivs = educationArr.map(el => {
+    return (
+      <EducationCv
+        school={el.schoolName}
+        title={el.titleOfStudy}
+        country={el.country}
+        date={el.studyDate}
+        key={el.id}
+      />
+    )
+  })
+
   const experienceElmts = experienceArr.map(el => {
     const index = experienceArr.findIndex(x => x.id === el.id);
     return (
@@ -240,7 +253,12 @@ function App() {
           <div className="experienceCvDiv">
             {experienceCvDivs}
           </div>
+          <h2 className="cvHeading">Education</h2>
+          <div className="educationCvDiv">
+            {educationCvDivs}
+          </div>
         </div>
+
       }
       {
         !showCv &&
