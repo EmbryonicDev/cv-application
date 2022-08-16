@@ -149,3 +149,8 @@ code {
   border-left: solid black;
   padding: 0 0 42px 40px;
 }
+
+.educationDateCv,
+.companyDateCv {
+  padding-bottom: 40px;
+}
