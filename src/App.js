@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PersonalForm from './Components/PersonalForm';
 import PersonalDiv from './Components/PersonalDiv';
 import EducationForm from './Components/EducationForm';
@@ -12,7 +12,7 @@ import ExperienceCv from './Components/ExperienceCv';
 import EducationCv from './Components/EducationCv';
 
 function App() {
-  const [personalData, setPersonalData] = useState({
+  const [personalData, setPersonalData] = useState(JSON.parse(localStorage.getItem('personalData') || {
     firstName: '',
     lastName: '',
     profession: '',
@@ -21,7 +21,7 @@ function App() {
     address: '',
     website: '',
     display: false
-  });
+  }));
   const [educationData, setEducationData] = useState({
     schoolName: '',
     titleOfStudy: '',
@@ -30,7 +30,7 @@ function App() {
     id: uniqid(),
     edit: false
   });
-  const [educationArr, setEducationArr] = useState([]);
+  const [educationArr, setEducationArr] = useState(JSON.parse(localStorage.getItem('educationArr')) || []);
   const [experienceData, setExperienceData] = useState({
     workName: '',
     workTitle: '',
@@ -41,8 +41,16 @@ function App() {
     id: uniqid(),
     edit: false
   });
-  const [experienceArr, setExperienceArr] = useState([]);
+  const [experienceArr, setExperienceArr] = useState(JSON.parse(localStorage.getItem('experienceArr')) || []);
   const [showCv, setShowCv] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem('educationArr', JSON.stringify(educationArr));
+  }, [educationArr]);
+
+  useEffect(() => {
+    localStorage.setItem('experienceArr', JSON.stringify(experienceArr));
+  }, [experienceArr])
 
   function handleChange(dataType, event) {
     const { name, value } = event.target;
@@ -77,7 +85,8 @@ function App() {
         ...prevState,
         display: true
       })
-    })
+    });
+    localStorage.setItem('personalData', JSON.stringify(personalData))
   }
 
   function editPersonal() {
