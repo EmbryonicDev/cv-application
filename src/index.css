@@ -20,20 +20,28 @@ code {
     monospace;
 }
 
-#personalForm {
+#editInfo {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  width: 800px;
+
 }
 
 .inputSet {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 16px;
 }
 
-.submitBtn {
-  margin-left: 40%;
+label {
+  width: 150px;
+  /* text-align: end; */
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 260px;
 }
 
 .pageLabel {
@@ -48,7 +56,6 @@ code {
 .pageData {
   font-weight: normal;
   margin-left: 8px;
-  max-width: 800px;
 }
 
 .educationDiv,
