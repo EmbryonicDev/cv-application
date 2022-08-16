@@ -130,7 +130,9 @@ code {
 
 .experienceCv,
 .educationCv {
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1.5fr 8.5fr;
   gap: 60px;
 }
 
