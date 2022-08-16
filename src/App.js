@@ -12,7 +12,7 @@ import ExperienceCv from './Components/ExperienceCv';
 import EducationCv from './Components/EducationCv';
 
 function App() {
-  const [personalData, setPersonalData] = useState({
+  const [personalData, setPersonalData] = useState(JSON.parse(localStorage.getItem('personalData') || {
     firstName: '',
     lastName: '',
     profession: '',
@@ -21,7 +21,7 @@ function App() {
     address: '',
     website: '',
     display: false
-  });
+  }));
   const [educationData, setEducationData] = useState({
     schoolName: '',
     titleOfStudy: '',
@@ -85,7 +85,8 @@ function App() {
         ...prevState,
         display: true
       })
-    })
+    });
+    localStorage.setItem('personalData', JSON.stringify(personalData))
   }
 
   function editPersonal() {
