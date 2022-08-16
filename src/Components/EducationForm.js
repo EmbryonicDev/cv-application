@@ -8,7 +8,7 @@ export default function EducationForm(props) {
       <form action="#" onSubmit={onSubmit}
       >
         <p className="inputSet">
-          <label htmlFor="schoolName">School / Institute Name:</label>
+          <label htmlFor="schoolName">School / Institute:</label>
           <input
             type="text"
             id="schoolName"
