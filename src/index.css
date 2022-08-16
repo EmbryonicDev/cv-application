@@ -122,23 +122,28 @@ code {
 }
 
 /* Experience Cv */
-.experienceCvDiv {
+.experienceCvDiv,
+.educationCvDiv {
   padding-bottom: 32px;
   border-bottom: solid black;
 }
 
-.experienceCv {
+.experienceCv,
+.educationCv {
   display: flex;
   gap: 60px;
 }
 
 .experienceCv h3,
 .experienceCv h4,
-.experienceCv p {
+.experienceCv p,
+.educationCv h3,
+.educationCv h4 {
   margin: 0;
 }
 
-.workTasksCv {
+.workTasksCv,
+.educationDescription {
   border-left: solid black;
   padding: 0 0 42px 40px;
 }
