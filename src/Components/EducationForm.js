@@ -51,7 +51,6 @@ export default function EducationForm(props) {
           Submit
         </button>
       </form>
-      <hr />
     </div>
   )
 }
