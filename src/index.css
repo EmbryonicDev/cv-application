@@ -24,7 +24,7 @@ code {
   display: flex;
   flex-direction: column;
   width: 800px;
-
+  border: solid black;
 }
 
 .inputSet {
@@ -35,7 +35,6 @@ code {
 
 label {
   width: 150px;
-  /* text-align: end; */
   font-weight: bold;
 }
 
@@ -44,8 +43,14 @@ textarea {
   width: 260px;
 }
 
+.dataWrap {
+  display: flex;
+  padding: 0 12px;
+}
+
 .pageLabel {
   justify-self: start;
+  min-width: 160px;
 }
 
 .pageLabel,
@@ -55,19 +60,9 @@ textarea {
 
 .pageData {
   font-weight: normal;
-  margin-left: 8px;
-}
-
-.educationDiv,
-.experienceDiv,
-#personalDiv {
-  display: grid;
-  width: fit-content;
-  grid-template-columns: repeat(2, max-content);
 }
 
 .categoryHeading {
-  grid-column: 1 / span 2;
   justify-self: center;
 }
 
