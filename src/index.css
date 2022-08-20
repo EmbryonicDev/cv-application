@@ -20,6 +20,36 @@ code {
     monospace;
 }
 
+/* Header */
+#headerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  border-radius: 15px;
+  margin: 28px 0;
+  box-shadow: 4px 4px 4px 3px #1e293b;
+  background: #f1f5f9;
+}
+
+.headerBtn {
+  height: 32px;
+  width: 90px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  background: #94a3b8;
+  font-weight: 600;
+}
+
+.headerBtn:hover {
+  cursor: pointer;
+}
+
+.headerBtn:active {
+  box-shadow: inset 0 0 10px #000000
+}
+
 #editInfo {
   display: flex;
   flex-direction: column;
