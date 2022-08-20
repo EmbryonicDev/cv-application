@@ -51,11 +51,24 @@ code {
   box-shadow: inset 0 0 10px #000000
 }
 
+/* Show CV */
+#personalForm,
+#educationForm,
+#experienceForm,
+#personalDiv,
+.educationDiv,
+.experienceDiv {
+  border-radius: 15px;
+  padding: 15px;
+  background: #f1f5f9;
+  box-shadow: 4px 4px 4px 3px #1e293b;
+
+}
+
 #editInfo {
   display: flex;
   flex-direction: column;
   width: 800px;
-  border: solid black;
 }
 
 .inputSet {
