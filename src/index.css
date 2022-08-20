@@ -1,3 +1,7 @@
+:root {
+  --lightTextColor: #475569;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -145,6 +149,10 @@ textarea {
   margin: 0;
 }
 
+.professionText {
+  color: var(--lightTextColor);
+}
+
 .contactList {
   list-style: none;
 }
@@ -169,6 +177,7 @@ textarea {
 .contactText {
   margin: 0;
   align-self: center;
+  color: var(--lightTextColor);
 }
 
 /* Experience / Education Cv */
