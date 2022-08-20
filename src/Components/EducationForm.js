@@ -3,7 +3,7 @@ export default function EducationForm(props) {
 
 
   return (
-    <div className="educationForm">
+    <div id="educationForm">
       <h1 className="formHeading">Education</h1>
       <form action="#" onSubmit={onSubmit}
       >
