@@ -21,6 +21,10 @@ code {
     monospace;
 }
 
+.App {
+  padding-bottom: 27px;
+}
+
 /* Header */
 #headerDiv {
   display: flex;
