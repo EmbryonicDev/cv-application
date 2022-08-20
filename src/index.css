@@ -62,12 +62,12 @@ code {
   padding: 15px;
   background: #f1f5f9;
   box-shadow: 4px 4px 4px 3px #1e293b;
-
 }
 
 #editInfo {
   display: flex;
   flex-direction: column;
+  gap: 27px;
   width: 800px;
 }
 
@@ -89,7 +89,6 @@ textarea {
 
 .dataWrap {
   display: flex;
-  padding: 0 12px;
 }
 
 .pageLabel {
@@ -107,7 +106,7 @@ textarea {
 }
 
 .categoryHeading {
-  justify-self: center;
+  margin: 0;
 }
 
 .editBtn,
