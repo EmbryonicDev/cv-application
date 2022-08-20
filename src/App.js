@@ -10,6 +10,7 @@ import ExperienceDiv from './Components/ExperienceDiv';
 import { PersonalCv } from './Components/PersonalCv';
 import ExperienceCv from './Components/ExperienceCv';
 import EducationCv from './Components/EducationCv';
+import Header from './Components/Header';
 
 function App() {
   const [personalData, setPersonalData] = useState(JSON.parse(localStorage.getItem('personalData')) || {
@@ -251,7 +252,10 @@ function App() {
 
   return (
     <div className="App">
-      <button id="toggleCv" onClick={toggleCv}>{showCv ? 'Edit CV' : 'Show CV'}</button>
+      <Header
+        toggleCv={toggleCv}
+        showCv={showCv}
+      />
       {
         showCv &&
         <div id="showCv">
