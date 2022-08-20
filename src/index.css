@@ -37,7 +37,7 @@ code {
   background: #f1f5f9;
 }
 
-.headerBtn {
+button {
   height: 32px;
   width: 90px;
   font-size: 1rem;
@@ -47,11 +47,11 @@ code {
   font-weight: 600;
 }
 
-.headerBtn:hover {
+button:hover {
   cursor: pointer;
 }
 
-.headerBtn:active {
+button:active {
   box-shadow: inset 0 0 10px #000000
 }
 
