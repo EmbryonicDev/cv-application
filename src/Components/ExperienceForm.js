@@ -11,6 +11,7 @@ export default function ExperienceForm(props) {
             id='workName'
             name='workName'
             value={data.workName}
+            required
             onChange={(event) => handleChange('experience', event)}
           />
         </p>
@@ -21,6 +22,7 @@ export default function ExperienceForm(props) {
             id='workTitle'
             name='workTitle'
             value={data.workTitle}
+            required
             onChange={(event) => handleChange('experience', event)}
           />
         </p>
@@ -31,6 +33,7 @@ export default function ExperienceForm(props) {
             id='country'
             name='country'
             value={data.country}
+            required
             onChange={(event) => handleChange('experience', event)}
           />
         </p>
@@ -43,6 +46,7 @@ export default function ExperienceForm(props) {
             id='jobTasks'
             name='jobTasks'
             value={data.jobTasks}
+            required
             onChange={(event) => handleChange('experience', event)}
           >
           </textarea>
@@ -54,6 +58,7 @@ export default function ExperienceForm(props) {
             id='startDate'
             name='startDate'
             value={data.startDate}
+            required
             onChange={(event) => handleChange('experience', event)}
           />
         </p>
@@ -64,6 +69,7 @@ export default function ExperienceForm(props) {
             id='endDate'
             name='endDate'
             value={data.endDate}
+            required
             onChange={(event) => handleChange('experience', event)}
           />
         </p>

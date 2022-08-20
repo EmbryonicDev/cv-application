@@ -14,6 +14,7 @@ export default function EducationForm(props) {
             id="schoolName"
             name="schoolName"
             value={data.schoolName}
+            required
             onChange={(event) => handleChange('education', event)}
           />
         </p>
@@ -24,6 +25,7 @@ export default function EducationForm(props) {
             id="titleOfStudy"
             name="titleOfStudy"
             value={data.titleOfStudy}
+            required
             onChange={(event) => handleChange('education', event)}
           />
         </p>
@@ -34,6 +36,7 @@ export default function EducationForm(props) {
             id="country"
             name="country"
             value={data.country}
+            required
             onChange={(event) => handleChange('education', event)}
           />
         </p>
@@ -44,6 +47,7 @@ export default function EducationForm(props) {
             id="studyDate"
             name="studyDate"
             value={data.studyDate}
+            required
             onChange={(event) => handleChange('education', event)}
           />
         </p>
