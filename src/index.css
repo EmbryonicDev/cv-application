@@ -55,13 +55,14 @@ button:active {
   box-shadow: inset 0 0 10px #000000
 }
 
-/* Show CV */
+/* !Show CV */
 #personalForm,
 #educationForm,
 #experienceForm,
 #personalDiv,
 .educationDiv,
-.experienceDiv {
+.experienceDiv,
+#showCv {
   border-radius: 15px;
   padding: 15px;
   background: #f1f5f9;
