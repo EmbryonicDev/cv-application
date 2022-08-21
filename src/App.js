@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import PersonalForm from './Components/PersonalForm';
-import PersonalDiv from './Components/PersonalDiv';
 import EducationForm from './Components/EducationForm';
 import EducationDiv from './Components/EducationDiv';
 import './index.css';
@@ -21,7 +20,6 @@ function App() {
     tel: '',
     address: '',
     website: '',
-    display: false
   });
   const [educationData, setEducationData] = useState({
     schoolName: '',
@@ -77,26 +75,6 @@ function App() {
         };
       });
     }
-  }
-
-  function submitPersonal(e) {
-    e.preventDefault();
-    setPersonalData(prevState => {
-      return ({
-        ...prevState,
-        display: true
-      })
-    });
-    localStorage.setItem('personalData', JSON.stringify(personalData))
-  }
-
-  function editPersonal() {
-    setPersonalData(prevState => {
-      return ({
-        ...prevState,
-        display: false
-      })
-    })
   }
 
   function clearEducation() {
@@ -187,6 +165,7 @@ function App() {
   }
 
   function toggleCv() {
+    localStorage.setItem('personalData', JSON.stringify(personalData))
     setShowCv(prevState => !prevState)
   }
 
@@ -281,14 +260,6 @@ function App() {
             <PersonalForm
               data={personalData}
               handleChange={handleChange}
-              submitPersonal={submitPersonal}
-            />
-          }
-          {
-            personalData.display &&
-            <PersonalDiv
-              personalData={personalData}
-              edit={editPersonal}
             />
           }
           <EducationForm
