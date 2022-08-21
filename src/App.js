@@ -166,6 +166,7 @@ function App() {
   }
 
   function toggleCv() {
+    localStorage.setItem('personalData', JSON.stringify(personalData))
     setShowCv(prevState => !prevState)
   }
 
