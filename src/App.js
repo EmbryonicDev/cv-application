@@ -78,17 +78,6 @@ function App() {
     }
   }
 
-  function submitPersonal(e) {
-    e.preventDefault();
-    setPersonalData(prevState => {
-      return ({
-        ...prevState,
-        display: true
-      })
-    });
-    localStorage.setItem('personalData', JSON.stringify(personalData))
-  }
-
   function clearEducation() {
     setEducationData({
       schoolName: '',
@@ -271,7 +260,6 @@ function App() {
             <PersonalForm
               data={personalData}
               handleChange={handleChange}
-              submitPersonal={submitPersonal}
             />
           }
           <EducationForm
