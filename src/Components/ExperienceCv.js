@@ -11,7 +11,7 @@ export default function ExperienceCv(props) {
       </div>
       <div className="workTasksCv">
         <h3>{workTitle}</h3>
-        <p>{jobTasks}</p>
+        <h4>{jobTasks}</h4>
       </div>
     </div>
   )
