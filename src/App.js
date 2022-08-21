@@ -89,15 +89,6 @@ function App() {
     localStorage.setItem('personalData', JSON.stringify(personalData))
   }
 
-  function editPersonal() {
-    setPersonalData(prevState => {
-      return ({
-        ...prevState,
-        display: false
-      })
-    })
-  }
-
   function clearEducation() {
     setEducationData({
       schoolName: '',
