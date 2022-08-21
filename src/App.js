@@ -20,7 +20,6 @@ function App() {
     tel: '',
     address: '',
     website: '',
-    display: false
   });
   const [educationData, setEducationData] = useState({
     schoolName: '',
