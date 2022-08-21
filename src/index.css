@@ -141,7 +141,7 @@ textarea {
   align-items: flex-end;
   justify-content: space-between;
   margin: 0;
-  border-bottom: solid black;
+  border-bottom: solid var(--lightTextColor);
 }
 
 .name,
@@ -184,7 +184,7 @@ textarea {
 .experienceCvDiv,
 .educationCvDiv {
   padding-bottom: 32px;
-  border-bottom: solid black;
+  border-bottom: solid var(--lightTextColor);
 }
 
 .experienceCv,
@@ -202,9 +202,15 @@ textarea {
   margin: 0;
 }
 
+.experienceCv h4,
+.experienceCv p,
+.educationCv h4 {
+  color: var(--lightTextColor);
+}
+
 .workTasksCv,
 .educationDescription {
-  border-left: solid black;
+  border-left: solid var(--lightTextColor);
   padding: 0 0 42px 40px;
 }
 
