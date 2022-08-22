@@ -214,6 +214,11 @@ textarea {
   padding: 0 0 42px 40px;
 }
 
+.educationDescription {
+  display: flex;
+  align-items: center;
+}
+
 .educationDateCv,
 .companyDateCv {
   padding-bottom: 27px;
